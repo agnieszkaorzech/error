@@ -1,5 +1,8 @@
 package edu.upc.eetac.dsa.beeter.dao;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface StingDAOQuery {
     public final static String UUID = "select REPLACE(UUID(),'-','')";
     public final static String CREATE_STING = "insert into stings (id, userid, subject, content) values (UNHEX(?), unhex(?), ?, ?)";

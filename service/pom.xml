@@ -88,6 +88,11 @@
             <version>1.7.12</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+        </dependency>
+
 
 
 
@@ -131,6 +136,7 @@
             </plugin>
         </plugins>
     </build>
+
 
     <properties>
         <jersey.version>2.21</jersey.version>

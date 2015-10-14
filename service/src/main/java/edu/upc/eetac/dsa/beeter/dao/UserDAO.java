@@ -1,9 +1,10 @@
 package edu.upc.eetac.dsa.beeter.dao;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import edu.upc.eetac.dsa.beeter.entity.User;
 
 import java.sql.SQLException;
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface UserDAO {
     public User createUser(String loginid, String password, String email, String fullname) throws SQLException, UserAlreadyExistsException;
 
