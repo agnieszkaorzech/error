@@ -10,10 +10,6 @@ import java.net.URI;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
 
-/**
- * Main class.
- *
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Main {
     // Base URI the Grizzly HTTP server will listen on
