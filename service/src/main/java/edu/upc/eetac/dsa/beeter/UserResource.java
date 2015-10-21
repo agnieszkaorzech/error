@@ -77,4 +77,18 @@ public class UserResource {
         }
         return user;
     }
+    @Path("/{id}")
+    @DELETE
+    public void deleteUser(@PathParam("id") String id){
+        String userid = securityContext.getUserPrincipal().getName();
+        if(!userid.equals(id))
+            throw new ForbiddenException("operation not allowed");
+        UserDAO userDAO = new UserDAOImpl();
+        try {
+            if(!userDAO.deleteUser(id))
+                throw new NotFoundException("User with id = "+id+" doesn't exist");
+        } catch (SQLException e) {
+            throw new InternalServerErrorException();
+        }
+    }
 }

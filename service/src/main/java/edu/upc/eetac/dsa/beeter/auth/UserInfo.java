@@ -11,7 +11,7 @@ import java.util.List;
 public class UserInfo implements Principal {
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     private String name;
