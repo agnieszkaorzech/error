@@ -1,8 +1,14 @@
 package edu.upc.eetac.dsa.beeter.auth;
 
-import java.util.List;
-import java.util.regex.Pattern;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import java.util.regex.Pattern;
+import java.util.List;
+
+/**
+ * Created by Hp on 2015-10-14.
+ */
 public class AuthorizedResource {
     private String path;
     private List<String> methods;

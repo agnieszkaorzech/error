@@ -9,11 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserInfo implements Principal {
-    @Override
-    public String getName() {
-        return name;
-    }
-
     private String name;
     private List<Role> roles = new ArrayList<>();
 
@@ -24,6 +19,10 @@ public class UserInfo implements Principal {
         this.name = name;
     }
 
+    @Override
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;

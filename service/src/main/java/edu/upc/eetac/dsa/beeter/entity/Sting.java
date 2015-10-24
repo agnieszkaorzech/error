@@ -1,11 +1,14 @@
 package edu.upc.eetac.dsa.beeter.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.glassfish.jersey.linking.InjectLinks;
 
 import javax.ws.rs.core.Link;
+
 import java.util.List;
+/**
+ * Created by Hp on 2015-10-04.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Sting {
     @InjectLinks({})
